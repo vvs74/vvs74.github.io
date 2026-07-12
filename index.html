@@ -120,7 +120,7 @@
             <div class="about__body reveal">
               <p>
                 I'm a <span class="about__highlight">data and business analyst</span> based in Amherst, Massachusetts,
-                with 3+ years of experience at Accenture supporting a Fortune 500 P&amp;C insurance client (Travelers).
+                with 3+ years of experience at Accenture supporting a Fortune 500 P&amp;C insurance client.
               </p>
               <p>
                 My work spans <span class="about__highlight">SQL-driven data pipelines, Power BI dashboards, and requirements analysis</span> —
@@ -336,10 +336,10 @@
               <p class="project-card__category">NLP &amp; Predictive Modeling</p>
               <h3 class="project-card__title">Airbnb Review Sentiment &amp; Price Prediction</h3>
               <p class="project-card__desc">
-                Analyzed 60K+ Airbnb reviews using TF-IDF, LDA topic modeling, and DistilBERT sentiment scoring
-                to extract guest experience signals from unstructured text. Engineered 100+ features from text,
-                geospatial, and categorical data. Ridge Regression and Neural Network models achieved R² = 0.58
-                on 11K Vienna listings, surfacing key revenue drivers by neighborhood.
+                Processed 320K Vienna Airbnb reviews into 58.5K listing-level records, comparing LDA, NMF, and LSA topic models 
+                and scoring sentiment with DistilBERT. Engineered 85+ text, geospatial, and categorical features. A Keras neural 
+                network reached R² = 0.62 against 0.51 for Ridge, and permutation importance showed price is driven by structural 
+                features (bedrooms, occupancy, location) while review sentiment barely correlates at all (r = 0.016
               </p>
               <div class="project-card__tags">
                 <span class="tag">Python</span>
@@ -354,6 +354,39 @@
               </a>
             </div>
           </article>
+
+          <!-- Project: P&C Insurance Claims Analytics -->
+<article class="project-card reveal reveal--delay-1">
+  <div class="project-card__visual">
+    <div class="project-card__visual-bg" style="background: linear-gradient(135deg, #1e3a5f, var(--color-primary));"></div>
+    <svg class="project-card__visual-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/>
+    </svg>
+  </div>
+  <div class="project-card__body">
+    <p class="project-card__category">SQL &amp; Data Modeling</p>
+    <h3 class="project-card__title">P&amp;C Insurance Claims Analytics</h3>
+    <p class="project-card__desc">
+      Designed a 7-table normalized MySQL schema modeling P&amp;C insurance operations
+      (policies, claims, payments, agents, coverage lines) and wrote 8 business-driven SQL
+      analyses covering loss ratio by line, regional claim frequency and severity, settlement
+      time, and large-loss review. Built rule-based fraud triage and customer risk segmentation
+      using CTEs, CASE logic, and window functions, surfacing one adjuster who handled 4 of 7
+      fraud-flagged claims, all theft denials closed within 12 days.
+    </p>
+    <div class="project-card__tags">
+      <span class="tag">SQL</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">Data Modeling</span>
+      <span class="tag">Window Functions</span>
+      <span class="tag">CTEs</span>
+    </div>
+    <a href="https://github.com/vvs74/pnc-claims-analytics" class="project-card__link" target="_blank" rel="noopener noreferrer">
+      View on GitHub
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</article>
 
           <!-- Project 2: Lending Club -->
           <article class="project-card reveal reveal--delay-1">
