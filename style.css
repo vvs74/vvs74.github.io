@@ -1340,3 +1340,34 @@ section {
 /* never allow sideways scroll on small screens */
 html, body { overflow-x: clip; }
 .footer__links { flex-wrap: wrap; row-gap: var(--space-2); }
+
+/* ─── PROJECTS: in-progress card ─────────────────────────────── */
+.project-card--wip {
+  grid-column: span 2;
+  flex-direction: row;
+  border-style: dashed;
+}
+
+.project-card--wip .project-card__visual {
+  flex: 0 0 34%;
+  height: auto;
+  min-height: 180px;
+}
+
+.project-card__status {
+  display: inline-block;
+  margin-left: var(--space-2);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-warning);
+  border: 1px solid color-mix(in srgb, var(--color-warning) 40%, transparent);
+  background: color-mix(in srgb, var(--color-warning) 10%, transparent);
+  border-radius: var(--radius-full);
+  padding: 2px var(--space-2);
+}
+
+@media (max-width: 680px) {
+  .project-card--wip { grid-column: auto; flex-direction: column; }
+  .project-card--wip .project-card__visual { flex: none; height: 148px; min-height: 0; }
+}
